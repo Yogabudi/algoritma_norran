@@ -42,7 +42,7 @@ void generateRandomNumber(int hasil[], int panjangArray) {
 }
 
 int main(int argc, char** argv) {
-  int banyaknya = 5;
+  int banyaknya = 10;
 
   if(argc > 1) {
     banyaknya = stoi(argv[1]);
@@ -51,11 +51,18 @@ int main(int argc, char** argv) {
   int angkaRandom[banyaknya];
   int panjangArray = sizeof(angkaRandom) / sizeof(int);
 
+  cout << "Algoritma NORRAN\n";
+  cout << "-----------------\n";
+  cout << "Jumlah Angka : " << panjangArray << "\n";
   generateRandomNumber(angkaRandom, panjangArray);
+  cout << "Hasil : ";
 
   for(int i = 0; i < panjangArray; i++) {
-    cout << angkaRandom[i] << "\n";
+    cout << angkaRandom[i] + 1 << " ";
   }
+
+  cout << endl;
+  getchar();
 
   return 0;
 }
